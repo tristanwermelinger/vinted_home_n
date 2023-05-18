@@ -30,14 +30,31 @@ const OfferId = () => {
     <div className="flexposition">
       <img src={data.product_image.secure_url} alt="" />
       <span className="flexproduct">
+        <div>Prix :{data.product_price ? data.product_price : ""} €</div>
         <div>
-          Prix :{data.product_price} €{data.product_details[0].MARQUE}
+          {data.product_details[0] ? data.product_details[0].MARQUE : ""}
         </div>
-        <div>Taille :{data.product_details[1].TAILLE}</div>
-        <div>Etat :{data.product_details[2].ETAT}</div>
-        <div>Couleur :{data.product_details[3].COULEUR}</div>
-        <div>Emplacement :{data.product_details[4].EMPLACEMENT}</div>
-        <div>Mode de Paiement :{data.product_details[5].MODES_DE_PAIEMENT}</div>
+        <div>
+          Taille :
+          {data.product_details[1] ? data.product_details[1].TAILLE : ""}
+        </div>
+        <div>
+          Etat :{data.product_details[2] ? data.product_details[2].ETAT : ""}
+        </div>
+        <div>
+          Couleur :
+          {data.product_details[3] ? data.product_details[3].COULEUR : ""}
+        </div>
+        <div>
+          Emplacement :
+          {data.product_details[4] ? data.product_details[4].EMPLACEMENT : ""}
+        </div>
+        <div>
+          Mode de Paiement :
+          {data.product_details[5]
+            ? data.product_details[5].MODES_DE_PAIEMENT
+            : ""}
+        </div>
         {/* <div>{data.product_name}</div> */}
       </span>
     </div>
