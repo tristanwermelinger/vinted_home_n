@@ -61,3 +61,23 @@ button {
   width: 100%;
   object-fit: cover;
 }
+
+.flexposition {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flexproduct {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 40px;
+  gap: 10px;
+}

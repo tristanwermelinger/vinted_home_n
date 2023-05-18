@@ -27,10 +27,19 @@ const OfferId = () => {
   return isLoading ? (
     <p>Loading ...</p>
   ) : (
-    <div>
-      <div>{data.product_image.secure_url}</div>
-      <div>{data.product_name}</div>
-      {/* <p>Success</p> */}
+    <div className="flexposition">
+      <img src={data.product_image.secure_url} alt="" />
+      <span className="flexproduct">
+        <div>
+          Prix :{data.product_price} €{data.product_details[0].MARQUE}
+        </div>
+        <div>Taille :{data.product_details[1].TAILLE}</div>
+        <div>Etat :{data.product_details[2].ETAT}</div>
+        <div>Couleur :{data.product_details[3].COULEUR}</div>
+        <div>Emplacement :{data.product_details[4].EMPLACEMENT}</div>
+        <div>Mode de Paiement :{data.product_details[5].MODES_DE_PAIEMENT}</div>
+        {/* <div>{data.product_name}</div> */}
+      </span>
     </div>
   );
 };
