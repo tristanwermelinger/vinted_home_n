@@ -11,7 +11,7 @@ const OfferId = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://lereacteur-vinted-api.herokuapp.com/offer/{id}`
+          `https://lereacteur-vinted-api.herokuapp.com/offer/${id}`
         );
         setData(response.data);
         console.log(response.data);
@@ -28,8 +28,9 @@ const OfferId = () => {
     <p>Loading ...</p>
   ) : (
     <div>
-      {/* <div>{data.offer[0]._id}</div> */}
-      <p>Success</p>
+      <div>{data.product_image.secure_url}</div>
+      <div>{data.product_name}</div>
+      {/* <p>Success</p> */}
     </div>
   );
 };
