@@ -1,24 +1,36 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 const Signup = () => {
-  const [data, setData] = useState();
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.post(
-          "https://lereacteur-vinted-api.herokuapp.com/user/signup"
-        );
-        setData(response.data);
-        console.log(response.data);
-      } catch (error) {
-        console.log(error.message);
-      }
-    };
-    fetchData();
-  }, []);
+  // const handleSubmit = async (event) => {
+  //   try {
+  //     event.preventDefault();
+  //     const response = await axios.post(
+  //       "https://lereacteur-vinted-api.herokuapp.com/user/signup"
+  //     );
 
-  // return
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // };
+
+  return (
+    <div>
+      <h2>S'inscrire</h2>
+      <form id="contactForm">
+        <input
+          type="text"
+          id="username"
+          value="username"
+          placeholder="Nom d'utilisateur"
+        />
+      </form>
+    </div>
+  );
 };
+
 export default Signup;
