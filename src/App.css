@@ -81,3 +81,11 @@ button {
   margin-left: 40px;
   gap: 10px;
 }
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0 30px 0;
+  font-size: 40px;
+}
